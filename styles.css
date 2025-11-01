@@ -1,0 +1,622 @@
+/* ============================================
+   ARCHITECT MAGAZINE - STYLES
+   Design & Architecture Magazine Website
+   ============================================ */
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background: #FFFFFF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background: #313131;
+    z-index: 1000;
+    top: 0;
+}
+
+.navbar-container {
+    max-width: 1900px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 27px;
+    height: 27px;
+    background: url('./images/logo-img-1.png') no-repeat center;
+    background-size: contain;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.main-menu {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.main-menu a {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-menu a:hover,
+.main-menu a.active {
+    color: #14B9D5;
+}
+
+.brand-link {
+    color: #FF0000 !important;
+}
+
+.search {
+    width: 70px;
+    height: 70px;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: -16px;
+    transition: background 0.3s;
+}
+
+.search:hover {
+    background: #1a1a1a;
+}
+
+.search::before {
+    content: url('./images/fe-search.png');
+    font-size: 17px;
+    color: white;
+}
+
+/* ============================================
+   HEADER/HERO SECTION
+   ============================================ */
+.header {
+    width: 100%;
+    height: 438px;
+    position: relative;
+    margin-top: 70px;
+    background: #000000;
+}
+
+.header-background {
+    width: 100%;
+    height: 456px;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('./images/header-background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 70px;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 45px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    width: 170px;
+    height: 55px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.subscribe-btn {
+    background: #89CA62;
+}
+
+.best-articles-btn {
+    background: #14B9D5;
+}
+
+/* ============================================
+   MOST POPULAR POSTS SECTION
+   ============================================ */
+.most-popular-section {
+    width: 100%;
+    background: #F2F2F2;
+    padding: 49px 0 80px;
+}
+
+.section-container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 37px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #18B4CF;
+    margin-bottom: 50px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.post-card {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-img {
+    width: 100%;
+    height: 259px;
+    object-fit: cover;
+}
+
+.post-img-tall {
+    height: 380px;
+}
+
+.post-img-medium {
+    height: 290px;
+}
+
+.post-img-short {
+    height: 247px;
+}
+
+.post-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #353A3D;
+    padding: 20px;
+}
+
+/* ============================================
+   PARALLAX/CLIENTS SECTION
+   ============================================ */
+.parallax-section {
+    width: 100%;
+    height: 588px;
+    position: relative;
+    background: #000000;
+}
+
+.parallax-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('./images/Parallax/bb2e07376edfdf7c3eaff7bf372f3d6502cc5bb7.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.clients-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 60px;
+    height: 3px;
+    background: #18B4CF;
+    margin: 0 auto 60px;
+}
+
+.brands {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 400;
+    opacity: 0.9;
+    transition: opacity 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.brand-script {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+}
+
+/* ============================================
+   LATEST POSTS THUMBNAILS
+   ============================================ */
+.latest-posts-section {
+    width: 100%;
+    padding: 51px 0 80px;
+    background: #FFFFFF;
+}
+
+.latest-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    margin-top: 50px;
+}
+
+.latest-post-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+}
+
+.latest-post-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* ============================================
+   HOT NEWS SECTION
+   ============================================ */
+.hot-news-section {
+    width: 100%;
+    background: #FFFFFF;
+    padding: 48px 20px 80px;
+}
+
+.news-grid {
+    display: none;
+}
+
+.news-row {
+    display: grid;
+    gap: 40px;
+    max-width: 1540px;
+    margin: 0 auto 40px auto;
+}
+
+.news-row-first {
+    grid-template-columns: 2fr 1fr;
+}
+
+.news-row-middle {
+    grid-template-columns: 1fr 1fr;
+}
+
+.news-row-last {
+    grid-template-columns: 1fr 2fr;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #F9F7F7;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.news-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-item-single {
+    display: flex;
+    gap: 20px;
+    background: #F9F7F7;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.news-img {
+    width: 100;
+    height: 80;
+    flex-shrink: 0;
+    object-fit: fill;
+    overflow: hidden;
+}
+
+.news-content {
+    padding: 41px 23px 41px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.news-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #353A3D;
+    margin-bottom: 15px;
+}
+
+.news-description {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #5B6469;
+    object-fit: fill;
+}
+
+.news-item-small {
+    background: transparent;
+    flex-direction: column;
+    width: 277px;
+}
+
+.news-img-small {
+    width: 277px;
+    height: 210px;
+}
+
+.news-content-small {
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    width: 100%;
+    height: 80px;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 367px 0 1438px;
+}
+
+.footer-text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    color: #FFFFFF;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.footer-logo-img {
+    width: 38px;
+    height: 24px;
+    background: url('./images/Footer_logos/b927521fcc47e2640a8b10691e813843459d9f86.png');
+    background-size: cover;
+}
+
+.footer-logo-text {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1600px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, 370px);
+    }
+
+    .latest-posts-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-menu {
+        display: none;
+    }
+
+    .posts-grid,
+    .news-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .latest-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-item {
+        max-width: 600px;
+    }
+
+    .parallax-bg {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .header-title {
+        font-size: 22px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .news-item {
+        flex-direction: column;
+    }
+
+    .news-img {
+        width: 100%;
+    }
+
+    .latest-posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brands {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .parallax-section {
+        height: auto;
+        padding: 60px 20px;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
